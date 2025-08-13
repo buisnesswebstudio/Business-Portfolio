@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Business Web Studio — Modern Web Design & Dev</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Business Web Studio — modern, minimal web design, animations and performant development. Reach out on Instagram @business_web_studio1" />
+</head>
+<body>
+  <div class="bg-shapes" aria-hidden="true">
+    <div class="shape" style="--start-rotation:10deg"></div>
+    <div class="shape" style="--start-rotation:-20deg"></div>
+    <div class="shape" style="--start-rotation:25deg"></div>
+    <div class="shape" style="--start-rotation:-10deg"></div>
+    <div class="shape" style="--start-rotation:30deg"></div>
+    <div class="shape" style="--start-rotation:-15deg"></div>
+  </div>
+
+  <!-- HEADER (keeps logo, desktop nav, burger, and mobile dropdown) -->
+  <header>
+    <div class="container header-row">
+      <nav class="glass nav-bar" role="navigation" aria-label="Main navigation">
+        <!-- Brand -->
+        <div class="logo" id="logoBtn" tabindex="0" title="Business Web Studio" role="button" aria-pressed="false" style="display:flex;align-items:center;gap:10px;">
+          <img src="logo.png" alt="Business Web Studio Logo" style="height:40px;width:auto;">
+          <span class="brand">Business Web Studio</span>
+        </div>
+
+        <!-- Desktop nav -->
+        <div class="nav-links" id="navMenu" role="menubar">
+          <a href="#" onclick="showPage('home'); return false;" class="active" role="menuitem">Home</a>
+          <a href="#" onclick="showPage('about'); return false;" role="menuitem">About</a>
+          <a href="#" onclick="showPage('services'); return false;" role="menuitem">Services</a>
+          <a href="#" onclick="showPage('portfolio'); return false;" role="menuitem">Gallery</a>
+          <a href="#" onclick="showPage('contact'); return false;" role="menuitem">Contact</a>
+        </div>
+
+        <!-- Burger (mobile) -->
+        <button id="burgerBtn" class="burger" aria-label="Open menu" aria-controls="mobileMenuDropdown" aria-expanded="false" type="button">
+          <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </nav>
+
+      <!-- Mobile dropdown (slide down) -->
+      <div id="mobileMenuDropdown" class="mobile-dropdown" aria-hidden="true">
+        <button class="m-btn" data-target="home" type="button">Home</button>
+        <button class="m-btn" data-target="about" type="button">About</button>
+        <button class="m-btn" data-target="services" type="button">Services</button>
+        <button class="m-btn" data-target="portfolio" type="button">Gallery</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- Home -->
+    <section id="home" class="page active">
+      <div class="container">
+        <div class="content-wrapper">
+          <section class="hero glass">
+            <div class="hero-image">
+              <!-- replace with your hero image file -->
+              <img src="img1.jpg" alt="Showcase image" loading="lazy" />
+            </div>
+            <div class="hero-content">
+              <h1>We build modern web experiences</h1>
+              <p>Business Web Studio crafts minimal, performant websites with beautiful animations and clear user journeys. We design, develop, and ship products that convert.</p>
+              <div class="hero-ctas">
+                <a class="cta-button" href="#" id="ctaLearn" onclick="showPage('services'); return false;">Our Services</a>
+                <a class="cta-button primary" id="ctaContact" href="https://instagram.com/business_web_studio1" target="_blank" rel="noopener">Get in Touch — @business_web_studio1</a>
+              </div>
+            </div>
+          </section>
+
+          <section class="features" aria-labelledby="features-heading">
+            <h2 id="features-heading">What I do</h2>
+            <div class="feature-card glass">
+              <div class="feature-icon">🎯</div>
+              <h3>Strategy & Planning</h3>
+              <p>Clear goals, user research, and conversion first thinking to align your website with real outcomes.</p>
+            </div>
+            <div class="feature-card glass">
+              <div class="feature-icon">🎨</div>
+              <h3>Design & Branding</h3>
+              <p>Minimal, elegant interfaces with consistent identity and accessible components.</p>
+            </div>
+            <div class="feature-card glass">
+              <div class="feature-icon">💻</div>
+              <h3>Frontend & Backend</h3>
+              <p>Modern stacks, performance optimizations, CMS integrations and custom tooling as required.</p>
+            </div>
+            <div class="feature-card glass">
+              <div class="feature-icon">⚡</div>
+              <h3>Performance</h3>
+              <p>Images, code-splitting, and careful animations that keep sites snappy on mobile and desktop.</p>
+            </div>
+            <div class="feature-card glass">
+              <div class="feature-icon">🔁</div>
+              <h3>Maintenance</h3>
+              <p>Ongoing updates, security patches and quick iteration after launch.</p>
+            </div>
+            <div class="feature-card glass">
+              <div class="feature-icon">📈</div>
+              <h3>Growth</h3>
+              <p>SEO basics, analytics and small experiments to increase traffic and conversions.</p>
+            </div>
+          </section>
+
+          <!-- Case studies teaser -->
+          <section id="case-studies" class="glass-section">
+            <h2>Selected Case Studies</h2>
+            <div class="case-grid">
+              <article class="case card glass">
+                <img src="redesign.jpg" alt="Case study 1" />
+                <div class="case-content">
+                  <h3>Studio Rebrand</h3>
+                  <p>Complete brand and website refresh for a creative studio — new site increased leads by 42% in 3 months.</p>
+                </div>
+              </article>
+
+              <article class="case card glass">
+                <img src="saas.jpg" alt="Case study 2" />
+                <div class="case-content">
+                  <h3>SaaS Landing</h3>
+                  <p>High-converting landing page + onboarding UI for an early-stage SaaS product.</p>
+                </div>
+              </article>
+
+              <article class="case card glass">
+                <img src="analystics.jpg" alt="Case study 3" />
+                <div class="case-content">
+                  <h3>E-commerce Pulse</h3>
+                  <p>Performance improvements and small UX fixes that cut bounce rate and increased AOV.</p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="page">
+      <div class="container">
+        <div class="content-wrapper">
+          <section class="about-content">
+            <div class="about-text glass">
+              <h2>About Business Web Studio</h2>
+              <p>I’m a solo web studio focused on turning small teams and founders into confident digital brands. I combine thoughtful design with pragmatic engineering to craft fast, accessible websites that people remember.</p>
+              <p>My process is collaborative: I research, prototype, and deliver. I ship cleaner code, lighter pages, and measurable results. I believe in long-term partnerships — not one-off projects.</p>
+              <p>Contact me directly on Instagram <a href="https://instagram.com/business_web_studio1" target="_blank" rel="noopener">@business_web_studio1</a> or via the contact form below.</p>
+            </div>
+
+            <div class="about-stats">
+              <div class="stat-card glass">
+                <div class="stat-number">100+</div>
+                <div class="stat-label">Projects</div>
+              </div>
+              <div class="stat-card glass">
+                <div class="stat-number">1</div>
+                <div class="stat-label">Founder</div>
+              </div>
+              <div class="stat-card glass">
+                <div class="stat-number">99%</div>
+                <div class="stat-label">Client Retention</div>
+              </div>
+              <div class="stat-card glass">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Support</div>
+              </div>
+            </div>
+          </section>
+
+          <section class="founder-section">
+            <h2>Founder</h2>
+            <div class="founder-grid glass">
+              <div class="founder-avatar">👨‍💻</div>
+              <div class="founder-content">
+                <h3>Reis Manaj</h3>
+                <p>Founder & Lead Developer — I build and maintain the sites personally to ensure long term quality and evolution. I work closely with every client to ensure their goals are met, from the first sketch to the final launch.</p>
+                <p class="small">Contact: <a href="mailto:reismanaj6@gmail.com">reismanaj6@gmail.com</a> | Phone: <a href="tel:+0697467427">0697467427</a></p>
+                <div class="small">Find me on Instagram: <a href="https://instagram.com/business_web_studio1" target="_blank">@business_web_studio1</a></div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="page">
+      <div class="container">
+        <div class="content-wrapper">
+          <section class="hero glass">
+            <h1>Services & Capabilities</h1>
+            <p>From full website builds to focused improvements — here’s what I can do for you.</p>
+          </section>
+
+          <section class="services-grid extended">
+            <div class="service-card glass">
+              <div class="service-header">
+                <div class="service-icon">🧭</div>
+                <h3>Discovery & Strategy</h3>
+              </div>
+              <p>Workshops, user research, and prioritised roadmaps so your product answers real customer needs.</p>
+              <ul class="service-features">
+                <li>Stakeholder interviews</li>
+                <li>User research</li>
+                <li>Prioritised roadmap</li>
+              </ul>
+            </div>
+
+            <div class="service-card glass">
+              <div class="service-header">
+                <div class="service-icon">🎨</div>
+                <h3>Design Systems</h3>
+              </div>
+              <p>Reusable components and UI systems that speed up future work and keep visual consistency.</p>
+              <ul class="service-features">
+                <li>Design tokens</li>
+                <li>Component libraries</li>
+                <li>Accessible patterns</li>
+              </ul>
+            </div>
+
+            <div class="service-card glass">
+              <div class="service-header">
+                <div class="service-icon">⚙️</div>
+                <h3>Full-stack Development</h3>
+              </div>
+              <p>Modern, maintainable codebases using the best tools for performance and developer experience.</p>
+              <ul class="service-features">
+                <li>Static & dynamic sites</li>
+                <li>Headless CMS</li>
+                <li>API integrations</li>
+              </ul>
+            </div>
+
+            <div class="service-card glass">
+              <div class="service-header">
+                <div class="service-icon">🚀</div>
+                <h3>Optimization & Scale</h3>
+              </div>
+              <p>Performance tuning, caching, and observability so your product feels fast & reliable.</p>
+              <ul class="service-features">
+                <li>Image & asset optimization</li>
+                <li>Critical path rendering</li>
+                <li>Monitoring & alerts</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="process glass-section">
+            <h2>My Process</h2>
+            <ol class="process-list">
+              <li><strong>Plan:</strong> define scope, success metrics, and milestones.</li>
+              <li><strong>Design:</strong> wireframes → visual design → prototype.</li>
+              <li><strong>Build:</strong> implement components, pages, and integrations.</li>
+              <li><strong>Launch:</strong> QA, performance checks and deploy.</li>
+              <li><strong>Iterate:</strong> fast follow-ups and continuous improvements.</li>
+            </ol>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -> CAROUSEL -->
+    <section id="portfolio" class="page">
+      <div class="container">
+        <div class="content-wrapper">
+          <h2>Gallery</h2>
+
+          <!-- Carousel: one visible slide at a time -->
+          <div class="carousel-wrapper glass" id="portfolioCarousel" aria-roledescription="carousel">
+            <button class="carousel-prev" aria-label="Previous image">‹</button>
+
+            <div class="carousel-track-wrapper">
+              <ul class="carousel-track" role="list">
+                <li class="carousel-slide" role="listitem">
+                  <figure class="carousel-media card">
+                    <img src="web1.jpg" alt="Project 1 — Business Website" loading="lazy">
+                    <figcaption class="carousel-caption">Project 1 — Business Website</figcaption>
+                  </figure>
+                </li>
+
+                <li class="carousel-slide" role="listitem">
+                  <figure class="carousel-media card">
+                    <img src="web2.jpg" alt="Project 2 — Portfolio" loading="lazy">
+                    <figcaption class="carousel-caption">Project 2 — Portfolio</figcaption>
+                  </figure>
+                </li>
+
+                <li class="carousel-slide" role="listitem">
+                  <figure class="carousel-media card">
+                    <img src="web3.jpg" alt="Project 3 — E-commerce" loading="lazy">
+                    <figcaption class="carousel-caption">Project 3 — E-commerce</figcaption>
+                  </figure>
+                </li>
+
+                <li class="carousel-slide" role="listitem">
+                  <figure class="carousel-media card">
+                    <img src="web4.jpg" alt="Project 4 — Blog" loading="lazy">
+                    <figcaption class="carousel-caption">Project 4 — Blog</figcaption>
+                  </figure>
+                </li>
+              </ul>
+            </div>
+
+            <button class="carousel-next" aria-label="Next image">›</button>
+
+            <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Carousel pagination"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="page">
+      <div class="container">
+        <div class="content-wrapper">
+          <section class="contact-grid">
+            <div class="contact-form glass">
+              <h2>Get in touch</h2>
+              <!-- Formspree endpoint -->
+              <form id="contactForm" action="https://formspree.io/f/myzplzel" method="POST" autocomplete="on">
+                <div class="form-row">
+                  <label for="name">Full name</label>
+                  <input id="name" name="name" type="text" required />
+                </div>
+                <div class="form-row">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" required />
+                </div>
+                <div class="form-row">
+                  <label for="subject">Subject</label>
+                  <input id="subject" name="subject" type="text" />
+                </div>
+                <div class="form-row">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" required></textarea>
+                </div>
+                <div class="form-row">
+                  <button type="submit" class="cta-button primary">Send message</button>
+                  <button type="button" id="instaBtn" class="cta-button" aria-label="Open Instagram">Message on Instagram</button>
+                </div>
+              </form>
+            </div>
+
+            <aside class="contact-info glass">
+              <h2>Contact details</h2>
+              <div class="contact-item">
+                <div class="contact-item-icon">📧</div>
+                <div class="contact-item-text"><h4>Email</h4><p><a href="mailto:reismanaj6@gmail.com">reismanaj6@gmail.com</a></p></div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-icon">📞</div>
+                <div class="contact-item-text"><h4>Phone</h4><p><a href="tel:+0697467427">0697467427</a></p></div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-icon">📍</div>
+                <div class="contact-item-text"><h4>Canada / Albania</h4><p>Remote-first studio — worldwide clients</p></div>
+              </div>
+              <div class="contact-item small">Prefer DMs? <a href="https://instagram.com/business_web_studio1" target="_blank">@business_web_studio1</a></div>
+            </aside>
+          </section>
+
+          <section class="faq glass-section">
+            <h2>FAQ</h2>
+            <details><summary>How long does a typical website take?</summary><p>Small brochure sites: 2–4 weeks. Larger projects: 6–12+ weeks depending on scope.</p></details>
+            <details><summary>Do you offer maintenance?</summary><p>Yes — post-launch maintenance packages are available on request.</p></details>
+            <details><summary>How do you charge?</summary><p>Project-based or monthly retainers — we discuss during discovery.</p></details>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (kept full) -->
+  <footer id="footer" style="background-color: #1c2331; color: #fff; padding: 40px 20px; font-family: Arial, sans-serif;">
+    <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px;">
+
+      <!-- Company Info -->
+      <div style="flex: 1 1 250px; min-width: 220px;">
+        <h3 style="color: #7c4dff; margin-bottom: 15px;">Business Web Studio</h3>
+        <p style="line-height: 1.6;">
+          At Business Web Studio, we craft stunning, tailor-made websites designed to captivate your audience. Our mission is to help businesses of all sizes grow by enhancing their online presence, improving user engagement, and driving measurable results that boost conversions and brand recognition.
+        </p>
+        <div style="margin-top: 20px;">
+          <!-- Social Icons (placeholders) -->
+          <a href="#" style="color: #7c4dff; margin-right: 15px; font-size: 20px; text-decoration: none;"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" style="color: #7c4dff; margin-right: 15px; font-size: 20px; text-decoration: none;"><i class="fab fa-twitter"></i></a>
+          <a href="#" style="color: #7c4dff; margin-right: 15px; font-size: 20px; text-decoration: none;"><i class="fab fa-instagram"></i></a>
+          <a href="#" style="color: #7c4dff; margin-right: 15px; font-size: 20px; text-decoration: none;"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div style="flex: 1 1 150px; min-width: 150px;">
+        <h4 style="color: #7c4dff; margin-bottom: 15px;">Quick Links</h4>
+        <nav style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="#" style="color: #ccc; text-decoration: none; font-weight: 500;" onclick="showPage('about'); return false;">Info</a>
+          <a href="/help.html" style="color: #ccc; text-decoration: none; font-weight: 500;">Help</a>
+          <a href="#" style="color: #ccc; text-decoration: none; font-weight: 500;" onclick="showPage('contact'); return false;">Contact</a>
+          <a href="/privacy-policy.html" style="color: #ccc; text-decoration: none; font-weight: 500;">Privacy Policy</a>
+        </nav>
+      </div>
+
+      <!-- Contact Info -->
+      <div style="flex: 1 1 220px; min-width: 220px;">
+        <h4 style="color: #7c4dff; margin-bottom: 15px;">Contact</h4>
+        <p style="margin: 6px 0;"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i>Albania/Canada Worldwide clients</p>
+        <p style="margin: 6px 0;"><i class="fas fa-envelope" style="margin-right: 8px;"></i>reismanaj6@gmail.com</p>
+        <p style="margin: 6px 0;"><i class="fas fa-phone" style="margin-right: 8px;"></i>697467427</p>
+        <p style="margin: 6px 0;">
+          <i class="fab fa-instagram" style="margin-right: 8px;"></i>
+          <a href="https://instagram.com/business_web_studio1" target="_blank" style="color: #ccc; text-decoration: none;">
+            @business_web_studio1
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+    <div style="text-align: center; padding: 20px 0 0 0; color: #666; font-size: 14px; border-top: 1px solid #333; margin-top: 40px;">
+      © 2025 Business Web Studio. All rights reserved.
+    </div>
+  </footer>
+
+  <button id="scrollTopBtn" title="Back to top" aria-label="Back to top">↑</button>
+
+  <!-- Mobile sticky send bar -->
+  <div id="mobileSendBar" class="mobile-send-bar" aria-hidden="true">
+    <button id="mobileSendBtn" class="cta-button primary" aria-label="Send message (mobile)">Send</button>
+    <button id="mobileInstaBtn" class="cta-button" aria-label="Open Instagram (mobile)">Insta</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

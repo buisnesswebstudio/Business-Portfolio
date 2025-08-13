@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Help & Support — Business Web Studio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    h1 {
+      color: #7c4dff;
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+    details {
+      background: #2a2f48;
+      border-radius: 8px;
+      padding: 15px 20px;
+      margin-bottom: 15px;
+      color: #ddd;
+      cursor: pointer;
+      box-shadow: 0 0 5px rgba(124, 77, 255, 0.4);
+      font-size: 16px;
+    }
+    details[open] {
+      background: #3e4480;
+      color: #fff;
+    }
+    summary {
+      font-weight: 600;
+      outline: none;
+    }
+    summary::-webkit-details-marker {
+      display: none;
+    }
+    details > summary::before {
+      content: "▶";
+      display: inline-block;
+      margin-right: 10px;
+      transition: transform 0.3s ease;
+    }
+    details[open] > summary::before {
+      transform: rotate(90deg);
+    }
+    p {
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="glass nav-bar" role="navigation" aria-label="Main navigation">
+      <div class="logo" tabindex="0" role="button" aria-pressed="false">
+        Business Web Studio
+      </div>
+      <div class="nav-links" role="menubar">
+        <a href="index.html" role="menuitem">Home</a>
+        <a href="index.html#about" role="menuitem">About</a>
+        <a href="index.html#services" role="menuitem">Services</a>
+        <a href="index.html#portfolio" role="menuitem">Gallery</a>
+        <a href="index.html#contact" role="menuitem">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Help & Support</h1>
+    <p>Need assistance? Here are answers to common questions. If you don’t find what you’re looking for, feel free to <a href="index.html#contact">contact me</a> anytime!</p>
+
+    <details>
+      <summary>How do I request a website?</summary>
+      <p>You can get in touch via the <a href="index.html#contact">contact form</a> or send me a direct message on Instagram at <a href="https://instagram.com/business_web_studio1" target="_blank" rel="noopener">@business_web_studio1</a>. I’ll reply as soon as possible to discuss your project.</p>
+    </details>
+
+    <details>
+      <summary>What is the typical project timeline?</summary>
+      <p>Small brochure-style websites generally take 2–4 weeks. More complex projects can take 6–12 weeks or longer depending on scope and requirements. We’ll agree on timelines during discovery.</p>
+    </details>
+
+    <details>
+      <summary>Do you offer post-launch support?</summary>
+      <p>Yes! I offer ongoing maintenance packages to keep your site secure and up-to-date. Reach out anytime to discuss options that fit your needs and budget.</p>
+    </details>
+
+    <details>
+      <summary>How do you charge for projects?</summary>
+      <p>I typically work on a project basis or with monthly retainers for ongoing support. Prices depend on scope and complexity. You’ll receive a detailed estimate before we start.</p>
+    </details>
+
+    <details>
+      <summary>Can I update my website content myself?</summary>
+      <p>Yes, if desired, I can build your site with a content management system (CMS) that lets you edit text and images easily without needing to code.</p>
+    </details>
+
+    <details>
+      <summary>What technologies do you use?</summary>
+      <p>I use modern web technologies focused on performance, accessibility, and clean design, including HTML5, CSS3, JavaScript frameworks, and CMS integrations where appropriate.</p>
+    </details>
+
+  </main>
+
+  <footer style="background-color: #1c2331; color: #fff; padding: 40px 20px; font-family: Arial, sans-serif; text-align: center;">
+    © 2025 Business Web Studio. All rights reserved.
+  </footer>
+</body>
+</html>
